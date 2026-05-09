@@ -422,6 +422,9 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
     }
+    .gallery-grid--4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
     .gallery-item {
       aspect-ratio: 4/3;
       overflow: hidden;
@@ -797,6 +800,7 @@
       .results-grid { grid-template-columns: 1fr; }
       .strength-grid { grid-template-columns: 1fr; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid--4 { grid-template-columns: repeat(2, 1fr); }
       .works-cols { grid-template-columns: 1fr; }
       .voice-grid { grid-template-columns: 1fr; }
       .personality-grid { grid-template-columns: 1fr; }
@@ -980,18 +984,22 @@
       <div class="section-label">Gallery</div>
       <h2 class="section-title">活動の現場から</h2>
     </div>
-    <div class="gallery-grid">
+    <div class="gallery-grid gallery-grid--4">
       <div class="gallery-item">
         <img src="hironami02_shop.jpg" alt="ショップチャンネル 生放送">
         <div class="gallery-item-label">ショップチャンネル 生放送</div>
       </div>
       <div class="gallery-item">
-        <img src="hironami03.jpg" alt="テレビ生放送">
-        <div class="gallery-item-label">テレビ生放送</div>
-      </div>
-      <div class="gallery-item">
         <img src="hironami05_bayfm.jpg" alt="bayfm 生放送">
         <div class="gallery-item-label">bayfm 生放送</div>
+      </div>
+      <div class="gallery-item">
+        <img src="hironami03.jpg" alt="収録現場">
+        <div class="gallery-item-label">収録現場</div>
+      </div>
+      <div class="gallery-item">
+        <img src="hironami06.jpg" alt="ラジオ現場">
+        <div class="gallery-item-label">ラジオ現場</div>
       </div>
     </div>
   </div>
