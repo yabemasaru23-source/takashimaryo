@@ -705,6 +705,63 @@
       text-align: center;
     }
 
+    /* ===== CLIENT EVALUATION ===== */
+    .eval-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .eval-card {
+      background: var(--color-white);
+      border-left: 4px solid var(--color-accent);
+      padding: 32px 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .eval-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+    .eval-card--wide {
+      grid-column: 1 / -1;
+      border-left: 4px solid var(--color-accent-dark);
+      background: linear-gradient(135deg, var(--color-white) 0%, var(--color-bg2) 100%);
+    }
+    .eval-number {
+      font-family: var(--font-heading);
+      font-size: 3em;
+      font-weight: 300;
+      color: rgba(184,169,154,0.25);
+      line-height: 1;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      letter-spacing: -0.02em;
+    }
+    .eval-icon {
+      font-size: 1.8em;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+    .eval-title {
+      font-family: var(--font-heading);
+      font-size: 1em;
+      font-weight: 400;
+      color: var(--color-primary);
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+    .eval-desc {
+      font-size: 0.83em;
+      color: var(--color-text-light);
+      line-height: 2;
+    }
+    @media (max-width: 768px) {
+      .eval-grid { grid-template-columns: 1fr; }
+      .eval-card--wide { grid-column: 1; }
+    }
+
     /* ===== FOOTER ===== */
     footer {
       background: #1a1714;
@@ -794,7 +851,7 @@
   <div class="container">
     <div class="stats-grid">
       <div>
-        <div class="stat-num">60<span style="font-size:0.5em">本+</span></div>
+        <div class="stat-num">60<span style="font-size:0.5em">本超</span></div>
         <div class="stat-label">月間生放送本数</div>
       </div>
       <div class="stat-divider">
@@ -802,11 +859,11 @@
         <div class="stat-label">最大反響倍率</div>
       </div>
       <div class="stat-divider">
-        <div class="stat-num">10<span style="font-size:0.5em">局+</span></div>
+        <div class="stat-num">30<span style="font-size:0.5em">局+</span></div>
         <div class="stat-label">出演ラジオ局数</div>
       </div>
       <div class="stat-divider">
-        <div class="stat-num">30<span style="font-size:0.5em">年+</span></div>
+        <div class="stat-num">15<span style="font-size:0.5em">年+</span></div>
         <div class="stat-label">声のキャリア</div>
       </div>
     </div>
@@ -833,7 +890,7 @@
         <div class="profile-bio">
           <p>5歳でマイクを握り、高校時代にNHK放送コンクール「ラジオドラマ制作部門」最優秀賞・「アナウンスDJ部門」入選。声優・神谷明氏より表彰を受け、声の仕事への原点を築く。</p>
           <p>不動産・WEBマーケティング・EC運営・コピーライティングなど多彩なキャリアを経て、ラジオパーソナリティ・ナレーター・ショッピングキャスターとして本格始動。</p>
-          <p>現在は全国のラジオ番組にてショッピングキャスターとして多数出演。多い月には60本近い生放送を担当し、ダイエット系商材で反響800%超、低反響案件を130%超へ改善するなど、「出演することで結果が変わるキャスター」として継続指名が多数。</p>
+          <p>現在は全国30局以上のラジオ番組にてショッピングキャスターとして多数出演。多い月には60本を超える生放送を担当し、ダイエット系商材で反響800%超、低反響案件を130%超へ改善するなど、「出演することで結果が変わるキャスター」として継続指名が多数。</p>
         </div>
         <div class="profile-meta">
           <span class="profile-meta-item">日本舞踊</span>
@@ -1024,6 +1081,48 @@
           <span>テレビ制作会社</span>
           情報番組 AD
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENT EVALUATION ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Client Evaluation</div>
+      <h2 class="section-title">高嶋りょうのすごいところ<br><span style="font-size:0.65em; font-family:var(--font-body); font-weight:300; letter-spacing:0.1em; color:var(--color-text-light);">— クライアントからの評価 —</span></h2>
+    </div>
+    <div class="eval-grid">
+      <div class="eval-card">
+        <div class="eval-number">01</div>
+        <div class="eval-icon">🎯</div>
+        <h3 class="eval-title">「その場で原稿を変えられる」<br>瞬発的なリライト力</h3>
+        <p class="eval-desc">渡された原稿をそのまま読むのではなく、放送直前・放送中でも「このリスナーに刺さる言葉」へ瞬時に変換。クライアントから「毎回どこを変えたかわからないのに、なぜか反響が上がる」と言われる、現場叩き上げのリライト力。</p>
+      </div>
+      <div class="eval-card">
+        <div class="eval-number">02</div>
+        <div class="eval-icon">📈</div>
+        <h3 class="eval-title">苦戦商材を「蘇らせる」<br>商品訴求の再構築力</h3>
+        <p class="eval-desc">反響が出なかった商材・他のキャスターが苦手とする案件でも、商品の本質的な価値を掘り起こし、リスナーの日常と感情に紐づける訴求に再設計。「高嶋さんに頼んでから数字が変わった」という声が制作現場から絶えない。</p>
+      </div>
+      <div class="eval-card">
+        <div class="eval-number">03</div>
+        <div class="eval-icon">🎙️</div>
+        <h3 class="eval-title">生放送に強い<br>アドリブ対応力・安定感</h3>
+        <p class="eval-desc">月60本超の生放送をこなす圧倒的な現場経験から生まれる、予測不能な展開への柔軟な対応力。ゲストや進行の変化にも動じず、空気を読んで的確にトークを組み立てる安定感は「任せておけば安心」と制作側から厚い信頼を得ている。</p>
+      </div>
+      <div class="eval-card">
+        <div class="eval-number">04</div>
+        <div class="eval-icon">💬</div>
+        <h3 class="eval-title">「企画を返せる」<br>コメント力・企画理解力</h3>
+        <p class="eval-desc">単なる喋り手にとどまらず、番組の意図・制作の狙いを即座に読み取り、それに応えるコメントやアイディアを返せる出演者。「この人なら情報番組でコメンテーターもいける」「ロケでも現場を盛り上げられる」と、制作側からの評価が高い。</p>
+      </div>
+      <div class="eval-card eval-card--wide">
+        <div class="eval-number">05</div>
+        <div class="eval-icon">🌸</div>
+        <h3 class="eval-title">上品さと親しみやすさの絶妙なギャップが<br>「また聞きたい」を生む</h3>
+        <p class="eval-desc">見た目の上品な佇まいと、実際に話すときの親近感・ユーモアのギャップが、リスナーに「安心して聞ける」「ついつい聞いてしまう」という独特の引力を生む。美容・健康・生活情報ジャンルで特に高い支持を得ており、「高嶋さんが言うなら買ってみようかな」と思わせるパーソナリティは、他のキャスターにはない強みとしてクライアントから高く評価されている。</p>
       </div>
     </div>
   </div>
