@@ -183,6 +183,19 @@
       color: var(--color-accent-dark);
       border-radius: 50px;
     }
+    .hero-contact-link {
+      display: inline-block;
+      font-size: 0.85em;
+      letter-spacing: 0.12em;
+      color: var(--color-accent-dark);
+      border-bottom: 1px solid var(--color-accent);
+      padding-bottom: 3px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .hero-contact-link:hover {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
     .hero-image {
       position: relative;
       height: 80vh;
@@ -669,6 +682,28 @@
       line-height: 1.8;
       opacity: 0.75;
     }
+    /* QRコードのみ中央表示 */
+    .line-qr-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin: 0 auto;
+    }
+    .line-qr-center img {
+      width: 160px;
+      height: 160px;
+      border-radius: 12px;
+      border: 3px solid rgba(255,255,255,0.25);
+      background: #fff;
+      padding: 4px;
+    }
+    .line-qr-note {
+      font-size: 0.8em;
+      opacity: 0.6;
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
 
     /* ===== FOOTER ===== */
     footer {
@@ -747,10 +782,7 @@
       <span class="hero-tag">情報番組</span>
       <span class="hero-tag">コメンテーター</span>
     </div>
-    <a href="#contact" class="line-btn" style="max-width:280px; font-size:0.9em; padding:14px 20px;">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-      お問い合わせ・ご相談
-    </a>
+    <a href="#contact" class="hero-contact-link">仕事依頼・お問い合わせはこちら →</a>
   </div>
   <div class="hero-image">
     <img src="hironami01.jpg" alt="高嶋りょう プロフィール写真" loading="eager">
@@ -893,15 +925,15 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="hironami05.jpg" alt="ショップチャンネル 生放送">
+        <img src="hironami02_shop.jpg" alt="ショップチャンネル 生放送">
         <div class="gallery-item-label">ショップチャンネル 生放送</div>
       </div>
       <div class="gallery-item">
-        <img src="hironami04.jpg" alt="テレビ 生放送">
+        <img src="hironami03.jpg" alt="テレビ生放送">
         <div class="gallery-item-label">テレビ生放送</div>
       </div>
       <div class="gallery-item">
-        <img src="hironami03.jpg" alt="bayfm 生放送">
+        <img src="hironami05_bayfm.jpg" alt="bayfm 生放送">
         <div class="gallery-item-label">bayfm 生放送</div>
       </div>
     </div>
@@ -1032,20 +1064,11 @@
 
     <!-- LINE -->
     <div class="contact-line-wrap">
-      <div class="contact-line-label">LINE でのご相談はこちら</div>
-      <div class="line-qr-wrap">
+      <div class="contact-line-label">仕事依頼・お問い合わせは LINE</div>
+      <div class="line-qr-center">
         <img src="qrcode.png" alt="高嶋りょう LINE QRコード">
-        <div class="line-qr-text">
-          QRコードを読み取るか、<br>
-          下のボタンからLINEで<br>
-          直接ご連絡ください。
-        </div>
+        <p class="line-qr-note">QRコードを読み取ってLINEからご連絡ください</p>
       </div>
-      <a href="https://lin.ee/XXXXXXX" class="line-btn" target="_blank" rel="noopener noreferrer">
-        <!-- ↑ LINE公式アカウントのURLに変更してください -->
-        <svg viewBox="0 0 24 24" fill="currentColor" style="width:22px;height:22px;flex-shrink:0"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        LINEでメッセージを送る
-      </a>
     </div>
 
     <div class="contact-divider"><span>または メールフォームで</span></div>
