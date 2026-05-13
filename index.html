@@ -285,6 +285,7 @@
     }
     .profile-photo-wrap {
       position: relative;
+      overflow: hidden;
     }
     .profile-photo-wrap img {
       width: 100%;
@@ -791,12 +792,31 @@
       .hero-image img { object-position: center 10%; }
       .hero-image::before { background: linear-gradient(to bottom, transparent 60%, var(--color-bg) 100%); }
 
-      .stats-grid { grid-template-columns: repeat(2, 1fr); }
-      .stat-divider:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 20px; }
-      .stat-divider:nth-child(3) { border-left: none; border-top: 1px solid rgba(255,255,255,0.12); }
+      /* ===== STATS モバイル：4セルを均等に区切る ===== */
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+      }
+      .stats-grid > div {
+        padding: 24px 16px;
+      }
+      .stat-divider { border-left: none; }
+      .stats-grid > div:nth-child(1) {
+        border-right: 1px solid rgba(255,255,255,0.15);
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+      }
+      .stats-grid > div:nth-child(2) {
+        border-bottom: 1px solid rgba(255,255,255,0.15);
+      }
+      .stats-grid > div:nth-child(3) {
+        border-right: 1px solid rgba(255,255,255,0.15);
+      }
+
+      /* ===== Profile 装飾枠はみ出し修正 ===== */
+      .profile-photo-wrap { max-width: 260px; margin: 0 auto; overflow: visible; }
+      .profile-photo-wrap::after { display: none; }
 
       .profile-grid { grid-template-columns: 1fr; gap: 36px; }
-      .profile-photo-wrap { max-width: 260px; margin: 0 auto; }
 
       .results-grid { grid-template-columns: 1fr; }
       .strength-grid { grid-template-columns: 1fr; }
